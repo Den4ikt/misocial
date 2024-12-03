@@ -1,0 +1,18 @@
+mixin printmenu(items)
+    ul.menu
+        for item in items
+            li 
+                a(href=item.url) #{item.text}
+        li 
+            a(href="#").getstarted get started 
+mixin printcards(items)
+    for card in items
+        div.border
+            img(src=card.img)
+            h3.text-line #{card.h3}
+            div.price
+                sup $
+                p.big-letters  #{card.price}
+                sub /month
+            p.small-text #{card.p}
+            a.button(href=card.href) SELECT PLAN   
