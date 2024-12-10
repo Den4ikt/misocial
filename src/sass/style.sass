@@ -10,8 +10,8 @@
     position: absolute
     top: 50%
 @mixin button()
+    display: inline-block
     width: 190px
-    height: 50px
     border-radius: 25px
     font-size: 12px
     letter-spacing: 1px
@@ -38,14 +38,17 @@ a
     box-sizing: border-box
     text-align: center
 .text-line
-    font-size: 14px
-    letter-spacing: 1px
+    font-size: 13px
     text-transform: uppercase
     font-weight: 700
     font-family: "Maven Pro"
     text-align: center
     width: max-content
     margin: auto
+    margin-top: 20px
+    +media(480)
+        font-size: 14px
+        letter-spacing: 1px
 .line
     position: relative
     &::before
@@ -72,10 +75,37 @@ header
     color: white
     background-color: #7c8bd7
     background-image: url("../img/glasses.png")
-    height: 730px
+    padding: 10px
     a
         color: white
         padding: 5px
+.burger
+    width: 35px
+    height: 35px
+    border: 1px solid #fff
+    z-index: 3
+    +media(728)
+        display: none
+    &::before
+        +line()        
+        transition: all 1s ease
+        top: 25px
+        right: 18px
+    &::after
+        +line()
+        transition: all 1s ease
+        top: 35px
+        right: 18px
+.close::before
+    top: 30px
+    width: 40px
+    right: 10px
+    transform: rotate(130deg) 
+.close::after
+    top: 30px
+    width: 40px
+    right: 10px
+    transform: rotate(225deg)
 .topline
     display: flex
     justify-content: space-between
@@ -107,8 +137,8 @@ header
     letter-spacing: 1px
     font-family: "Maven Pro"
     margin: 10px
-    width: 500px
     +media(728)
+        width: 500px
         display: flex
     
     .getstarted
@@ -121,6 +151,18 @@ header
         left: 520px
         white-space: nowrap
 
+.show
+    display: flex
+    flex-direction: column
+    right: 0px
+    background-color: #6e47e1
+    z-index: 2
+    width: 100%
+    height: 100vh
+    top: 0
+    position: fixed
+    li a
+        display: block
 
 
 main
@@ -138,7 +180,7 @@ main
     box-sizing: border-box
     padding: 10px
     padding-top: 75px 
-    margin: auto
+    margin: 10px auto
     border: 1px solid #d3d8e6
     border-radius: 30px
     transition: all 1s ease
@@ -151,12 +193,15 @@ main
         background-color: #ffffff
     .text-line
         color: #c9ccd2
-        margin-top: 55px
-        margin-bottom: 30px
+        margin-top: 25px
+        margin-bottom: 10px
+        +media(1240)
+            margin-top: 55px
+            margin-bottom: 30px
     .price
         position: relative
         width: max-content
-        margin: auto
+        margin: 0 auto
         font-family: "Maven Pro"
         sup
             position: absolute
@@ -168,6 +213,8 @@ main
             font-size: 18px
             bottom: 10px
             right: -60px
+        p
+            margin: 0
     .small-text
         font-size: 16px
         line-height: 28px
@@ -196,7 +243,6 @@ main
     color: white
     background-color: #7c8bd7
     background-image: url("../img/globe.png")
-    height: 463px
 
 
 footer
@@ -214,12 +260,14 @@ footer
     color: #ffffff 
     background-color: #6e45e2 
     margin: 10px
+    padding: 10px
 
 .navigation-btn2
     +button()
     border: 1px solid #d7dbe8
     background-color: #ffffff
     color: #c2c9db
+    padding: 10px
 
 .copyright
     opacity: 0.502
