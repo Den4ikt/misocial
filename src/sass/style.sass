@@ -34,7 +34,7 @@ a
 .wrapper
     margin: 0 auto
     max-width: 1820rem
-    padding: 3rem
+    //padding: 46rem//
     box-sizing: border-box
     text-align: center
 .text-line
@@ -45,7 +45,7 @@ a
     text-align: center
     width: max-content
     margin: auto
-    margin-top: 20px
+    margin-top: 35px
     +media(480)
         font-size: 14px
         letter-spacing: 1px
@@ -64,21 +64,22 @@ a
     font-weight: 500
     font-family: "Maven Pro"
     text-align: center
-    text-transform: uppercase
+    //text-transform: uppercase//
     text-align: center
+    margin-top: 10px
         
 .small-text
-    font-size: 14px
+    font-size: 17px
     text-align: center 
     
 header
     color: white
     background-color: #7c8bd7
     background-image: url("../img/glasses.png")
-    padding: 10px
+    padding: 30px
     a
         color: white
-        padding: 5px
+        //padding: 5px//
 .burger
     width: 35px
     height: 35px
@@ -127,22 +128,24 @@ header
 .menu
     position: absolute
     display: none
-    right: 120px
+    //right: 120px//
     justify-content: space-between
-    padding: 20px
+    //padding: 20px//
     color: #ffffff
     font-size: 16px
     line-height: 19px
     font-weight: 500
     letter-spacing: 1px
     font-family: "Maven Pro"
-    margin: 10px
+    //margin: 10px//
     +media(728)
-        width: 500px
+        width: 755px
+        position: static
         display: flex
-    
+    .header-link
+        margin-top: 15px
+        display: inline-block
     .getstarted
-        position: absolute
         border: 1px solid white
         border-radius: 30px
         display: block
@@ -150,6 +153,8 @@ header
         top: 3px
         left: 520px
         white-space: nowrap
+        text-transform: uppercase
+        padding-bottom: 10px
 
 .show
     display: flex
@@ -164,8 +169,73 @@ header
     li a
         display: block
 
+.tags
+    .text-line
+        margin-top: 163px
+        margin-bottom: 0px
+    .big-letters
+        margin-top: 20px
+        font-size: 86px
+        margin-bottom: 15px
+    .small-text
+        line-height: 28px
+        font-size: 16px
+
+.navigation-link
+    margin: auto
+    margin-top: 170px
+    margin-bottom: 20px
+    position: relative
+    display: block
+    width: 65px
+    height: 65px
+    border-radius: 50%
+    background-color: #fff
+    filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+    &:hover
+        background-color: #6e45e2 
+        & span
+            border-color: white
+            &::before
+                border-color: white
+            &::after
+                border-color: white
+
+    span
+        position: absolute
+        border: none
+        border-left: 1px solid black
+        top: 18px
+        left: 32px
+        width: 1px
+        height: 32px
+        &::before
+            +line()
+            transform: rotate(25deg)
+            border: none
+            border-left: 1px solid black
+            top: 10px
+            left: 4px
+            width: 1px
+            height: 20px
+        &::after
+            +line()
+            transform: rotate(-25deg)
+            border: none
+            border-left: 1px solid black
+            top: 11px
+            left: -6px
+            width: 1px
+            height: 20px
+        &:hover
+            border-color: white
 
 main
+    .plan
+        padding-top: 81px
+        padding-bottom: 51px
+    .big-letters
+        margin-bottom: 29px
     .line
         &::before
             border-color: black
@@ -186,8 +256,9 @@ main
     transition: all 1s ease
     +media(1440)
         padding: 70px
-        padding-top: 75px 
+        padding-top: 60px 
         margin: 50px
+        max-width: 440px
     &:hover
         filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
         background-color: #ffffff
@@ -196,12 +267,13 @@ main
         margin-top: 25px
         margin-bottom: 10px
         +media(1240)
-            margin-top: 55px
-            margin-bottom: 30px
+            margin-top: 46px
+            //margin-bottom: 30px//
     .price
         position: relative
         width: max-content
         margin: 0 auto
+        margin-bottom: 27px
         font-family: "Maven Pro"
         sup
             position: absolute
@@ -229,6 +301,7 @@ main
         border: 1px solid #d7dbe8
         filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
         margin: 0 auto
+        margin-top: 36px
         transition: all 1s ease
         +button()
         padding: 10px

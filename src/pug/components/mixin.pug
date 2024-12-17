@@ -2,7 +2,7 @@ mixin printmenu(items)
     ul.menu
         for item in items
             li 
-                a(href=item.url) #{item.text}
+                a(href=item.url).header-link #{item.text}
         li 
             a(href="#").getstarted get started 
 mixin printcards(items)
