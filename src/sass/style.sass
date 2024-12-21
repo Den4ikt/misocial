@@ -21,7 +21,11 @@
     font-family: "Maven Pro"
     text-align: center
     padding: 20px
-
+@mixin cards()
+    box-sizing: border-box
+    border: 1px solid #d3d8e6
+    border-radius: 30px
+    transition: all 1s ease
 html
     font-size: 1px
 body
@@ -81,9 +85,6 @@ header
         color: white
         //padding: 5px//
 .burger
-    width: 35px
-    height: 35px
-    border: 1px solid #fff
     z-index: 3
     +media(728)
         display: none
@@ -155,6 +156,7 @@ header
         white-space: nowrap
         text-transform: uppercase
         padding-bottom: 10px
+        padding-top: 10px
 
 .show
     display: flex
@@ -244,16 +246,18 @@ main
 .cards
     display: flex
     flex-direction: column
+    justify-content: space-between
     +media(1024)
         flex-direction: row
 .border
-    box-sizing: border-box
     padding: 10px
     padding-top: 75px 
     margin: 10px auto
+    box-sizing: border-box
     border: 1px solid #d3d8e6
     border-radius: 30px
     transition: all 1s ease
+
     +media(1440)
         padding: 70px
         padding-top: 60px 
@@ -316,6 +320,8 @@ main
     color: white
     background-color: #7c8bd7
     background-image: url("../img/globe.png")
+    max-width: 1920px
+    height: 524px
 
 
 footer
