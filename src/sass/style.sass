@@ -38,7 +38,7 @@ a
 .wrapper
     margin: 0 auto
     max-width: 1820rem
-    //padding: 46rem//
+    padding: 6px
     box-sizing: border-box
     text-align: center
 .text-line
@@ -75,7 +75,7 @@ a
 .small-text
     font-size: 17px
     text-align: center 
-    
+
 header
     color: white
     background-color: #7c8bd7
@@ -244,6 +244,7 @@ main
         &::after
             border-color: black
 .cards
+    padding-bottom: 32px
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -252,7 +253,7 @@ main
 .border
     padding: 10px
     padding-top: 75px 
-    margin: 10px auto
+    margin: 10px auto 20px
     box-sizing: border-box
     border: 1px solid #d3d8e6
     border-radius: 30px
@@ -321,10 +322,14 @@ main
     background-color: #7c8bd7
     background-image: url("../img/globe.png")
     max-width: 1920px
-    height: 524px
+    margin-bottom: 40px
 
 
 footer
+    .text-line
+        padding-top: 170px
+    .big-letters
+        margin-bottom: 17px
     .logo
         strong
             color: #6a6a77
@@ -340,6 +345,7 @@ footer
     background-color: #6e45e2 
     margin: 10px
     padding: 10px
+    margin-bottom: 170px
 
 .navigation-btn2
     +button()
@@ -347,7 +353,12 @@ footer
     background-color: #ffffff
     color: #c2c9db
     padding: 10px
+    margin-bottom: 170px
 
+.bottom-footer
+    padding-top: 44px
+    display: flex
+    justify-content: space-between
 .copyright
     opacity: 0.502
     font-size: 14px
@@ -360,21 +371,28 @@ footer
     text-align: right
 .social-link
     display: inline-block
-    height: 16px
+    height: 8px
     background-image: url("../img/social.png")
-    background-size: 170px
+    background-size: 150px
+    transition: all 0.5s ease
+    //transition: filter 0.5s ease 0.5s
     &:hover
         transform: scale(1.2)
         filter: contrast(500%)
 .facebook 
     width: 17px
-    background-position: 0 0
+    background-position: 0 -1px
 .twiter
     width: 20px
-    background-position: -39px 0
+    background-position: -29px -3px
 .google
     width: 30px
-    background-position: 82px 0
+    background-position: 82px -3px
 .instagram
     width: 15px
-    background-position: 26px 0
+    background-position: 26px -3px
+
+
+
+
+
