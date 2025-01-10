@@ -81,6 +81,8 @@ header
     background-color: #7c8bd7
     background-image: url("../img/glasses.png")
     padding: 30px
+    background-position: center
+    background-size: cover
     a
         color: white
         //padding: 5px//
@@ -125,7 +127,11 @@ header
     strong
         display: inline-block
         margin-left: 20px
-        padding-bottom: 3.5px 
+        padding-bottom: 3.5px
+        +media(785)
+            display: none 
+        +media(1000)
+            display: inline-block
 .menu
     position: absolute
     display: none
@@ -258,7 +264,8 @@ main
     border: 1px solid #d3d8e6
     border-radius: 30px
     transition: all 1s ease
-
+    +media(1024)
+        margin: 10px
     +media(1440)
         padding: 70px
         padding-top: 60px 
@@ -324,7 +331,8 @@ main
     max-width: 1920px
     margin-bottom: 40px
     background-size: cover
-    +media(640)
+    background-position: center
+    +media(1990)
         background-size: contain
 
 
